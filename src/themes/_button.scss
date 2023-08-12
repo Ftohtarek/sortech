@@ -1,0 +1,69 @@
+@mixin sor-btn() {
+  background-color: transparent;
+  border-radius: 0.3em;
+  padding: 0.3em 0.6em;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+// @mixin hover-behavior($bgColor, $borderColor) {
+//   &:hover {
+//     background-color: $bgColor;
+//     border-color: $borderColor;
+//     color: $borderColor;
+//   }
+// }
+// @mixin solid-hover-behavior() {
+//   &:hover {
+//     filter: brightness(90%);
+//   }
+// }
+
+// @mixin active-behavior() {
+//   &:active {
+//     filter: brightness(95%);
+//   }
+// }
+
+// @mixin solid($bgColor, $borderColor) {
+//   background-color: $bgColor;
+//   border-color: transparent;
+//   color: $borderColor;
+//   @include solid-hover-behavior();
+//   @include active-behavior();
+// }
+
+// @mixin outline($bgColor, $borderColor) {
+//   background-color: transparent;
+//   border-color: $bgColor;
+//   color: $bgColor;
+//   @include hover-behavior($bgColor, $borderColor);
+//   @include active-behavior();
+// }
+
+.sor-btn {
+  @include sor-btn();
+}
+
+// .sor-btn-primary {
+//   @include solid($bgColor: $mainColor, $borderColor: $secondary);
+// }
+// .sor-btn-primary-outline {
+//   @include outline($bgColor: $secondary, $borderColor: $mainColor);
+// }
+// .sor-btn-accent {
+//   @include solid($bgColor: $accent, $borderColor: $secondary);
+// }
+// .sor-btn-accent-outline {
+//   @include outline($bgColor: $secondary, $borderColor: $accent);
+// }
+// .sor-btn-secondary {
+//   @include solid($bgColor: $secondary, $borderColor: $accent);
+// }
+// .sor-btn-secondary-outline {
+//   @include outline($bgColor: $secondary, $borderColor: $accent);
+// }
+.pointer {
+  cursor: pointer !important;
+}

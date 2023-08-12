@@ -1,0 +1,20 @@
+@use "src/themes/core" as themes;
+
+button {
+  background-color: var(--offset-bgColor) !important;
+  width: 100%;
+  font-size: 10px;
+  color: var(--offset-text);
+  @include themes.flex-center();
+  mat-icon{
+    height: fit-content;
+    width: fit-content;
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: "1255px") {
+  button {
+    height: 100%;
+    width: fit-content;
+  }
+}

@@ -1,0 +1,41 @@
+<section class="host" cdkDropListGroup [class.is-dragging]="isDragged">
+  <div *ngFor="let stage of stagesHeader ;let i=index" class="stage-container">
+    <div cdkDropList [cdkDropListOrientation]="deviceMode.isDesktop()?'vertical':'horizontal'" class="stage p-1"
+      [cdkDropListData]="stages.items[stage]" (cdkDropListDropped)="drop($event,stage)" [id]="stage">
+
+      <!-- stage raw header -->
+      <sor-stage-header>
+        <div class="icon"> <img [src]="stages.stageInfo[stage].img" alt=""></div>
+        <div class="header">{{stages.stageInfo[stage].title}}</div>
+        <div class="quantity">{{stages.stageInfo[stage].quantity}}</div>
+      </sor-stage-header>
+
+      <!-- stage raw add button -->
+      <div><sor-stage-add></sor-stage-add></div>
+
+      <!-- Draggable box -->
+      <div class="drag-box" *ngFor="let deal of stages.items[stage] " cdkDrag (cdkDragStarted)="isDragged=true"
+        (cdkDragEnded)="isDragged=false">
+
+        <!-- black box that placeholder to card -->
+        <div class="placeholder" *cdkDragPlaceholder></div>
+
+        <!-- card -->
+        <sor-stage-card [deal]="deal"></sor-stage-card>
+
+        <!--customize dragable card preview -->
+        <ng-template cdkDragPreview matchSize>
+          <div>
+            <div class="statge-drag-preview">
+              <sor-stage-card [deal]="deal"></sor-stage-card>
+            </div>
+          </div>
+        </ng-template>
+      </div>
+
+    </div>
+
+    <div class="spliter mx-2" *ngIf=" i!=3"></div>
+  </div>
+
+</section>

@@ -1,0 +1,26 @@
+@use "src/themes/core" as themes;
+header {
+  font-size: 14px;
+  color: --text-color;
+  padding: 5px;
+  border-bottom: 3px solid white;
+  padding-bottom: 1em;
+  min-width: 240px;
+  .icon-container {
+    background-color: red;
+    @include themes.circule(50px, 50px, white);
+    @include themes.flex-center();
+  }
+  h6{
+    font-weight: 600;
+  }
+  .booking {
+    font-size: .9em;
+    padding: 4px 7px;
+    color: var(--offset-text);
+    @include themes.chip($bgColor:var(--secondary),$shadow-width:0px,$shadow-spread:1px,$rounded:4px)
+  }
+  .sor-btn{
+    height: fit-content;
+  }
+}

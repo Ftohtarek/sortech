@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@use "./themes/core" as themes;
+@use "@angular/material" as mat;
+
+@include mat.core();
+
+body {
+  overflow-x: hidden;
+  background-color: var(--bgColor);
+  font-family: "Inter", sans-serif;
+  direction: rtl;
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+}
+.tooltip {
+  font-size: 12px;
+  border-radius: 3px;
+  color: white;
+  background-color: var(--accent) !important;
+}

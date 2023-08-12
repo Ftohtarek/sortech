@@ -1,0 +1,26 @@
+:where(:host, :root) {
+  --bgColor: #f6f8fa;
+  --text-color: #3d3e3f;
+  --offset: #e9e8eb;
+  --offset-text: #85909a;
+  --offset-bgColor: #eef2f5;
+  --offset-icon:#9EA3A9;
+  --secondary: #eceff2;
+
+  --succuss: #3dd598;
+
+  --accent:#1E1B39;
+  --danger:#FF4B55;
+}
+.offset-text {
+  color: var(--offset-text);
+}
+.offset-icon {
+  color: var(--offset-icon) !important;
+}
+.text-succuss {
+  color: var(--succuss);
+}
+.text-danger{
+  color: var(--danger) !important;
+}

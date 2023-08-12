@@ -1,0 +1,12 @@
+@mixin scrollbar-accent() {
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 3px;
+    scrollbar-width: thin !important;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 3px !important;
+    background-color: var(--accent);
+  }
+}

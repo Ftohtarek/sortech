@@ -1,0 +1,81 @@
+<div class="stage-card d-flex flex-column gap-2" >
+  <!-- header -->
+
+  <div class="header d-flex justify-content-between align-items-center">
+    <div class="d-flex gap-2 align-items-center">
+      <img src="assets/images/card/title.svg" alt="title">
+      <h6>{{deal?.title}}</h6>
+    </div>
+    <div class="status" matTooltip="state info" matTooltipClass="tooltip">
+      <i class="material-icons-outlined" [ngClass]="deal?.state()=='closed'?'text-danger':'text-succuss'">info</i>
+    </div>
+  </div>
+  <!-- body -->
+  <div class="body d-flex justify-content-between">
+
+    <div class="info d-flex align-items-center">
+      <div class="info-chip">
+        <i class="material-icons-outlined text-succuss"
+          [ngClass]="deal?.state() == 'closed'?'text-danger':'text-succuss'">monetization_on</i>
+        <span>{{deal?.cost}}$</span>
+      </div>
+
+      <div class="verical-splitter"></div>
+
+      <div class="info-chip">
+        <i class="material-icons-outlined offset-icon"> calendar_month</i>
+        <span>{{deal?.dayMonth}}</span>
+      </div>
+
+      <div class="verical-splitter"></div>
+
+      <div class="info-chip">
+        <i class="material-icons-outlined offset-icon">schedule</i>
+        <span>{{deal?.timeFrom}}</span>
+        <span class="">-</span>
+        <span>{{deal?.timeTo}}</span>
+      </div>
+    </div>
+
+    <button class="sor-btn timer" matTooltip [matTooltip]="'Info about the action'" [matTooltipClass]="'tooltip'">
+      <i class="material-icons-outlined " [ngClass]="deal?.state() == 'closed'?'offset-icon':'text-succuss'">timer</i>
+    </button>
+
+  </div>
+
+  <!-- footer -->
+  <div class="footer d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center gap-1">
+      <img src="assets/images/avatar.svg" alt="">
+      <div>
+        <div class="type">عميل</div>
+        <div class="name">{{deal?.client?.name}}</div>
+      </div>
+    </div>
+
+    <div class="phone"><a href="tel:{{deal?.client?.phone}}" class="sor-btn">
+        <i class="material-icons-outlined">call </i>
+      </a>
+    </div>
+    <div class="message"><a href="mailto:{{deal?.client?.email}}" target="_blank" class="sor-btn">
+        <i class="material-icons-outlined">forward_to_inbox</i>
+      </a>
+    </div>
+
+    <div class="verical-spliter"></div>
+
+    <div class="d-flex align-items-center gap-1">
+      <img src="assets/images/avatar1.svg" alt="">
+      <div>
+        <div class="type">دهانات</div>
+        <div class="name">هيثم محمد </div>
+      </div>
+    </div>
+
+    <div class="state">
+      <img *ngIf="false" src="assets/images/complete.svg" alt="">
+      <img *ngIf="deal?.state() != 'closed'" src="assets/images/stack.svg" alt="">
+      <img *ngIf="deal?.state() == 'closed'" src="assets/images/Notification.svg" alt="">
+    </div>
+  </div>
+</div>

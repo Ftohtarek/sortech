@@ -1,0 +1,14 @@
+@mixin circule($width: 20px, $height: 20px, $bgColor: white) {
+  width: $width;
+  height: $height;
+  border-radius: 100%;
+  background-color: $bgColor;
+}
+@mixin chip($bgColor: white, $rounded: 3px, $shadow-width: 3px, $shadow-spread: 5px) {
+  background-color: $bgColor;
+  border-radius: $rounded;
+  box-shadow: $shadow-width $shadow-width $shadow-spread rgba(0, 0, 0, 0.2);
+}
+.chip {
+  @include chip(transparent, 3px, 2px);
+}

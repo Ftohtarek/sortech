@@ -1,0 +1,59 @@
+@use "src/themes/core" as themes;
+
+.stage-card {
+  min-width: 265px;
+  padding: 5px;
+  font-size: 14px;
+  @include themes.chip($rounded: 5px, $shadow-width: 0px, $shadow-spread: 0px);
+}
+.header {
+  .status {
+    color: var(--succuss);
+  }
+  h6 {
+    font-size: 1em;
+    font-weight: 600;
+  }
+}
+.body {
+  .info-chip {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+    font-weight: 600;
+    font-size: 0.7em;
+    i {
+      font-size: 1.5em;
+    }
+  }
+
+  button.timer {
+    padding: 0;
+    height: fit-content;
+  }
+}
+.footer {
+  font-size: 0.7em;
+  a.sor-btn {
+    text-decoration: none;
+    color: var(--offset-text);
+    background-color: white;
+    border-radius: 100%;
+    padding: 0;
+    width: 1.8em;
+    height: 1.8em;
+    @include themes.flex-center();
+    border: 1px solid var(--offset-bgColor);
+    i {
+      font-size: 0.9em;
+    }
+  }
+}
+.verical-splitter {
+  display: inline-block;
+  height: 20px;
+  width: 2px;
+  margin: 0px 0.3em;
+  background-color: var(--offset-bgColor);
+}

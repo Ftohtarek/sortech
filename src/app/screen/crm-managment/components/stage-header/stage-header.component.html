@@ -1,0 +1,27 @@
+<header class="d-flex">
+  <div class="w-100 d-flex gap-2 flex-column align-items-center">
+    <!-- icon -->
+    <div class="icon-container">
+      <ng-content select=".icon"> </ng-content>
+    </div>
+    <!-- information -->
+    <div class="d-flex gap-3 align-items-center">
+      <h6>
+        <ng-content select=".header"></ng-content>
+      </h6>
+      <div class="booking d-flex align-items-center gap-1 ">
+        <img src="assets/images/clipboard.svg" alt="clipboard" width="16px">
+        <p class="d-flex justify-content-between">
+          <span class="px-1">
+            <ng-content select=".quantity"></ng-content>
+          </span>
+          <span>حجز</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- menu -->
+  <button class="sor-btn offset-text">
+    <mat-icon> more_horiz</mat-icon>
+  </button>
+</header>
